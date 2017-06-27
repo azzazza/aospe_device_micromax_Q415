@@ -1,0 +1,6 @@
+#!/system/bin/sh
+sleep 10
+D=$(date  +%Y-%m-%d)
+T=$(date +%H:%M:%S)
+echo  "$D" "$T" > /sdcard/1.txt
+echo "Hello user! I'm init.d." >> /sdcard/1.txt

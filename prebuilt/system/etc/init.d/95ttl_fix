@@ -1,0 +1,9 @@
+#!/system/bin/sh 
+sleep 10
+D=$(date  +%Y-%m-%d)
+T=$(date +%H:%M:%S)
+echo  "$D" "$T" > /sdcard/ttl.txt
+iptables -t mangle -A POSTROUTING -o rmnet+ -j TTL --ttl-set 64
+sleep 5
+iptables -v -t mangle -L | grep "TTL" >> /sdcard/ttl.txt
+exit 0
