@@ -14,6 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Block based ota
+BLOCK_BASED_OTA := false
+
 FORCE_32_BIT := true
 LOCAL_PATH := device/micromax/Q415
 TARGET_OTA_ASSERT_DEVICE := q415,Q415
