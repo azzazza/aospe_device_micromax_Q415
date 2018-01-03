@@ -122,6 +122,17 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
+# Offline charging
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+#RED_LED_PATH := "/sys/class/leds/red/brightness"
+#GREEN_LED_PATH := "/sys/class/leds/green/brightnes"
+#BLUE_LED_PATH := "/sys/class/leds/blue/brightnes"
+BACKLIGHT_PATH := "/sys/class/leds/lcd_backlight/brightness"
+CHARGING_ENABLED_PATH := "/sys/class/power_supply/battery/charging_enabled"
+HEALTHD_BACKLIGHT_LEVEL := 60
+NO_CHARGER_LED := true
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
