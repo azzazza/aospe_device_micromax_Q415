@@ -434,8 +434,15 @@ service ril-daemon2 /system/bin/rild -c 2
     disabled
     group radio cache inet misc audio sdcard_r sdcard_rw diag qcom_diag log
 
-service charger /charger
+#service charger /charger
+#    class charger
+#    group graphics
+#    seclabel u:r:healthd:s0
+
+service charger /sbin/healthd -c
     class charger
+    critical
+    user root
     group graphics
     seclabel u:r:healthd:s0
 
