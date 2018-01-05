@@ -2,6 +2,14 @@
 TARGET_SCREEN_WIDTH := 480
 TARGET_SCREEN_HEIGHT := 854
 
+TARGET_BOOTANIMATION_HALF_RES := true
+
+# TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_BOOTANIMATION_HALF_RES := true
+
+# Include Bootanimation configuration
+TARGET_BOOT_ANIMATION_RES := 854
+
 # Inherit some common LineageOS stuff.
 # $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 $(call inherit-product, vendor/aosp/common.mk)
